@@ -1,0 +1,107 @@
+{
+    "form-date": "2021-04-16",
+    "status": "true",
+    "msg": "Data has been successfully retrieved",
+    "data": {
+        "forms": [
+            {
+                "id": 19,
+                "name": "Well Monitoring Public",
+                "position": null,
+                "survey_name": ""
+            }
+        ],
+        "questions": [
+            {
+                "que_id": 182,
+                "form_id": 19,
+                "position": 1,
+                "question": "Name of the well owner",
+                "type": "edittext",
+                "value": "",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "0",
+                "condition_123": "",
+                "mandatory": "1",
+                "language": 1
+            },
+            {
+                "que_id": 180,
+                "form_id": 19,
+                "position": 2,
+                "question": "Type of Well",
+                "type": "spinner",
+                "value": "Bore Well#Open Well",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "0",
+                "condition_123": "",
+                "mandatory": "1",
+                "language": 1
+            },
+            {
+                "que_id": 178,
+                "form_id": 19,
+                "position": 3,
+                "question": "Is there water in the well?",
+                "type": "spinner",
+                "value": "Yes#No",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "0",
+                "condition_123": "183#Yes delimit 179#No",
+                "mandatory": "1",
+                "language": 1
+            },
+            {
+                "que_id": 183,
+                "form_id": 19,
+                "position": 4,
+                "question": "if yes - Depth to water level from ground (m)",
+                "type": "decimal",
+                "value": "",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "1",
+                "condition_123": "",
+                "mandatory": "1",
+                "language": 1
+            },
+            {
+                "que_id": 179,
+                "form_id": 19,
+                "position": 5,
+                "question": "if no - Depth of the well (m)",
+                "type": "decimal",
+                "value": "",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "1",
+                "condition_123": "",
+                "mandatory": "1",
+                "language": 1
+            },
+            {
+                "que_id": 181,
+                "form_id": 19,
+                "position": 6,
+                "question": "Photograph of Well",
+                "type": "image",
+                "value": "",
+                "hint": "",
+                "value_required": "",
+                "dependency_flag": "0",
+                "condition_123": "",
+                "mandatory": "1",
+                "language": 1
+            }
+        ],
+        "languages": [
+            {
+                "id": 1,
+                "language_name": "English"
+            }
+        ]
+    }
+}
