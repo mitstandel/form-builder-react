@@ -10,6 +10,9 @@ function App() {
     return question;
   }));
 
+  const queryParams = new URLSearchParams(window.location.search); 
+  const apiKey = queryParams.get('api_key');console.log(apiKey);
+
   const handleChange = (element, event) => {
     const conditions = element.condition_123.split(' delimit ');
     conditions.forEach((condition) => {

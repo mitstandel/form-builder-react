@@ -22,12 +22,14 @@
     "redux-form": "^8.3.9",
     "redux-persist": "^6.0.0",
     "redux-toolkit": "^1.1.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "env-cmd -f environments/.env.local react-scripts start",
     "start:staging": "env-cmd -f environments/.env.staging react-scripts start",
     "build": "env-cmd -f environments/.env.staging react-scripts build",
+    "build:bundle": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -48,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.2"
   }
 }
