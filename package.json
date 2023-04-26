@@ -28,7 +28,7 @@
   "scripts": {
     "start": "env-cmd -f environments/.env.local react-scripts start",
     "start:staging": "env-cmd -f environments/.env.staging react-scripts start",
-    "build": "env-cmd -f environments/.env.staging react-scripts build",
+    "build": "env-cmd -f environments/.env.local react-scripts build",
     "build:bundle": "webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

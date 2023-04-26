@@ -2,16 +2,30 @@ import { reduxForm } from 'redux-form';
 import './App.css';
 import Components from './Components';
 import formData from './data/form-data.json';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { checkAPIKey } from './Services/Utils/FormApis';
 
 function App() {
+  const queryParams = new URLSearchParams(window.location.search); 
+  const apiKey = queryParams.get('api_key');
+
+  useEffect(() => {
+    if (!apiKey) {
+      console.error('API Key is missing');
+      return false;
+    }
+    const checkAPI = () => {
+      checkAPIKey({ apiKey }).then((response) => {
+        console.log(response);
+      });
+    }
+    checkAPI();
+  }, [apiKey]);
+
   const [ formElements, setFormElements ] = useState(formData.data.questions.map((question) => {
     question.displayElement = question.dependency_flag !== "1";
     return question;
   }));
-
-  const queryParams = new URLSearchParams(window.location.search); 
-  const apiKey = queryParams.get('api_key');console.log(apiKey);
 
   const handleChange = (element, event) => {
     const conditions = element.condition_123.split(' delimit ');
